@@ -1,16 +1,14 @@
-name: 'Main'
+name: 'main'
 on:
   - push
 jobs:
   main:
-    name: 'Main'
+    name: 'main'
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout'
+      - name: 'checkout'
         uses: actions/checkout@master
-      - name: 'Sentinel Test'
+      - name: 'main'
         uses: ./
         with:
           myin1: "foo"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
