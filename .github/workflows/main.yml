@@ -9,7 +9,7 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@master
       - name: 'Sentinel Test'
-        uses: nfi-opsguru/gha-unexpectedvar-lib@main
+        uses: ./actions.yml
         with:
           myin1: "foo"
         env:
