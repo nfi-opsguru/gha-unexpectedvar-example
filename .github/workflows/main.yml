@@ -9,7 +9,7 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@master
       - name: 'Sentinel Test'
-        uses: ./actions.yml
+        uses: ./
         with:
           myin1: "foo"
         env:
