@@ -1,0 +1,16 @@
+name: 'Main'
+on:
+  - push
+jobs:
+  main:
+    name: 'Main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@master
+      - name: 'Sentinel Test'
+        uses: nfi-opsguru/gha-unexpectedvar-lib@main
+        with:
+          myin1: "foo"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
